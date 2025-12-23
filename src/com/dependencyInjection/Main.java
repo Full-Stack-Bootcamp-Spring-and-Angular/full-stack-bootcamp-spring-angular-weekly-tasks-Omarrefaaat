@@ -6,13 +6,17 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext container = new ClassPathXmlApplicationContext("applicationContext.xml");
-        Circle circle = (Circle) container.getBean("myCircle");
+        Circle circle = container.getBean("myCircle" , Circle.class);
         circle.drawShape();
+        ((ClassPathXmlApplicationContext)container).close();
 
-
-
-        Rectangle rectangle = (Rectangle) container.getBean("rectangle");
+        ApplicationContext container1 = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Rectangle rectangle = container1.getBean("rectangle" ,Rectangle.class);
         rectangle.drawShape();
+        ((ClassPathXmlApplicationContext)container1).close();
+
+
+
 
 
 

@@ -22,6 +22,13 @@ public class Rectangle implements Shape{
     public void drawShape() {
         draw2d.draw("Rectangle");
         draw3d.draw("Rectangle");
-
     }
+
+    public void connectionToDatabase (){
+        System.out.println("connection to database .....");
+    }
+    public void disconnectionToDatabase (){
+        System.out.println("disconnection from database .....");
+    }
+
 }
