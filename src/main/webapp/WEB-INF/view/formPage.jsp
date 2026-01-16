@@ -5,10 +5,11 @@
 </head>
 
     <body >
-        <form action="processForm">
-            <input type="number" placeholder="enter Year" name="year">
-            <input type="number" placeholder="enter month" name="month">
-            <input type="number" placeholder="enter day" name="day">
+        <form action="processForm" method="post">
+            <input type="text" placeholder="enter first name" name="firstName"> <br><br>
+            <input type="text" placeholder="enter last name" name="lastName"> <br><br>
+            <input type="email" placeholder="enter e-mail address" name="email"> <br><br>
+            <input type="date" placeholder="enter date of birth" name="birthDay"> <br><br>
             <input type="submit">
         </form>
     </body>

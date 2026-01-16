@@ -1,4 +1,4 @@
-package main.com.myApp.controller.Dao;
+package main.com.myApp.Dao;
 import lombok.Getter;
 import lombok.Setter;
 
