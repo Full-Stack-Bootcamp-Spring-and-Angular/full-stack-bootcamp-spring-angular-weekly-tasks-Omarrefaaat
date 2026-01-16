@@ -1,7 +1,7 @@
 package main.com.myApp.controller;
 
-import main.com.myApp.controller.Dao.DatabaseOperation;
-import main.com.myApp.controller.Dao.User;
+import main.com.myApp.Dao.DatabaseOperation;
+import main.com.myApp.Dao.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
