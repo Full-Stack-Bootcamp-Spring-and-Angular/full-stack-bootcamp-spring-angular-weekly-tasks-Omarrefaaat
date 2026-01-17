@@ -1,7 +1,9 @@
 package main.com.myApp.controller;
 
+import main.User.UserModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -15,18 +17,21 @@ import java.util.Locale;
 public class HomeController
 {
     @RequestMapping("/")
-    public String showHomePage()
+    public String showHomePage(Model model)
     {
+
+        UserModel userModel = new UserModel();
+        model.addAttribute("userModel", userModel);
+
         return "formPage";
     }
 
     @RequestMapping("/processForm")
-    public String processForm(@RequestParam("year") int year, @RequestParam("month") int month,@RequestParam("day") int day, Model model){
-        LocalDate today = LocalDate.now();
-        LocalDate birthday = LocalDate.of(year,month,day);
-        Period age = Period.between(birthday,today);
-        String result = "your age is " +  age.getYears() + "Year" + age.getMonths() + "Month" + age.getDays() + "day" ;
-        model.addAttribute("result",result);
+    public String processForm(@ModelAttribute("userModel")UserModel userModel, Model model){
+        String username = userModel.getUsername();
+
+        userModel.setUsername(username);
+        model.addAttribute("userModel",userModel);
         return "resultPage";
     }
 }
