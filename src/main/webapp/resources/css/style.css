@@ -1,0 +1,23 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.form-control,
+.form-select {
+    background-color: #f1f6ff;
+    border: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.15rem rgba(13,110,253,.25);
+}
+
+.btn-danger {
+    border-radius: 8px;
+    padding: 12px;
+}
