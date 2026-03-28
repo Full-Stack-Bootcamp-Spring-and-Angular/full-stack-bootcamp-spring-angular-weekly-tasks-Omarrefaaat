@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/full-stack-bootcamp-spring-angular-weekly-tasks-Omarrefaaat" vcs="Git" />
+=======
+>>>>>>> e8c5a78 (task5)
   </component>
 </project>
